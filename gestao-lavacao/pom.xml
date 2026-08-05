@@ -4,12 +4,10 @@
     
     <name>gestao-lavacao</name>
     <description>Sistema de Gestão de Lavagem</description>
-    <url>http://npd.uem.br/siga</url>
     <organization>
         <name>Equipe 08 - CC - LCA - SISTEMA DE GESTÃO DE LAVAÇÃO</name>
     </organization>
     
-    <groupId>br.uem.npd</groupId>
     <artifactId>mavenbootstrap</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
