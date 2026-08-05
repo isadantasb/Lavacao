@@ -1,4 +1,7 @@
 
+Mudar esse readme depois, deixei do projeto base original q disponibilizaram pra nós, pra poder configurar tudo certin
+
+VVV
 # mavenbootstrap
 
 Projeto em Maven para desenvolvimento em Java utilizando ZK Framework com Bootstrap para desenvolvimento *frontend* e Hibernate para comunicação com o banco de dados. 
