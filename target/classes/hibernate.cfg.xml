@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- Dados de conexão com o banco de dados -->
+        
+        <property name="hibernate.hikari.dataSource.serverName">desenvol0.uem.br</property>
+        <property name="hibernate.hikari.dataSource.portNumber">50000</property>
+        <property name="hibernate.hikari.dataSource.databaseName">desenvol</property>
+        <property name="hibernate.hikari.dataSource.user">db2bnd</property>
+        <property name="hibernate.hikari.dataSource.password">ibmdb2</property> 
+
+        <!-- Configurações HikariCP -->
+        
+        <property name="hibernate.hikari.dataSourceClassName">com.ibm.db2.jcc.DB2SimpleDataSource</property>
+        <property name="hibernate.hikari.dataSource.driverType">4</property>
+        <property name="hibernate.hikari.autoCommit">true</property>
+        <property name="hibernate.hikari.minimumIdle">1</property>
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        <property name="hibernate.hikari.maxLifetime">900000</property>
+        <property name="hibernate.hikari.idleTimeout">60000</property>
+        <property name="hibernate.hikari.leakDetectionThreshold">30000</property>
+        
+        <!-- Configurações HikariCP Logging -->
+        
+        <property name="com.zaxxer.hikari.level">TRACE</property>
+        <property name="logging.level.com.zaxxer.hikari.HikariConfig">DEBUG</property>
+        
+        <!-- Configurações Hibernate -->
+        
+        <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hibernate.connection.release_mode">on_close</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">false</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.query.factory_class">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect </property>
+    
+        <!-- Lista das classes modelo que representa tabelas do banco de dados para o hibernate mapear -->
+        
+        <!-- <mapping class="curso.model.Curso"/>
+        <mapping class="exemplos.endereco.model.Estado"/>
+        <mapping class="exemplos.endereco.model.Municipio"/>
+        <mapping class="exemplos.endereco.model.Pais"/>
+        <mapping class="inscricao.model.Inscricao"/>
+        <mapping class="pessoa.model.Pessoa"/> -->
+        
+    </session-factory>
+</hibernate-configuration>
