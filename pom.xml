@@ -10,7 +10,7 @@
     </organization>
     
     <groupId>br.uem.npd</groupId>
-    <artifactId>gestao-lavacao</artifactId>
+    <artifactId>mavenbootstrap</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
