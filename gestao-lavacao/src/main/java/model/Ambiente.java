@@ -2,7 +2,8 @@ package model;
 
 import javax.persistence.*;
 
-
+@Entity
+@Table(name="AMBIENTE")
 public class Ambiente {
 
     @Column(name="NM_AMBIENTE")
