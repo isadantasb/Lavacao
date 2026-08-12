@@ -5,7 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="AMBIENTE")
 public class Ambiente {
-
+	@Id
+	
     @Column(name="NM_AMBIENTE")
     private Integer nmAmbiente;
 
