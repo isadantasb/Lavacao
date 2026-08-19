@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Universidade Estadual de Maringá - UEM
+Núcleo de Processamento de Dados - NPD
+Copyright (c) 2020. All rights reserved.
+-->
+
+<language-addon>
+    <addon-name>my-custom-addon</addon-name>
+    <language-name>xul/html</language-name>
+  
+    <component>
+        <component-name>stepbar</component-name>
+        <component-class>zk.custom.Stepbar</component-class>
+        <macro-uri>/zk_custom/stepbar.zul</macro-uri>
+        <mold>
+            <mold-name>default</mold-name>
+            <css-uri>/css/stepbar.css</css-uri>
+        </mold>
+    </component>
+
+    <component>
+        <component-name>recaptcha</component-name>
+        <component-class>zk.custom.Recaptcha</component-class>
+        <macro-uri>/zk_custom/recaptcha.zul</macro-uri>
+         <mold>
+            <mold-name>default</mold-name>
+        </mold>
+    </component>
+</language-addon>

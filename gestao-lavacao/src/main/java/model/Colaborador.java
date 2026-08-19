@@ -4,12 +4,12 @@ package model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="USUARIO")
-public class Usuario {
+@Table(name="COLABORADOR")
+public class Colaborador {
 
     @Id
-    @Column(name="CD_USUARIO")
-    private Integer cdUsuario;
+    @Column(name="CD_COLABORADOR")
+    private Integer cdColaborador;
 
     @Column(name="NM_COMPLETO")
     private String nmCompleto;
@@ -21,8 +21,8 @@ public class Usuario {
     private String ltEmail;
 
     // Verificar se o mneumonico ta certo
-    @Column(name="SE_USUARIO")
-    private String seUsuario;
+    @Column(name="SE_COLABORADOR")
+    private String seColaborador;
 
     @Column(name="FG_ADMINISTRADOR")
     private Boolean fgAdministrador;

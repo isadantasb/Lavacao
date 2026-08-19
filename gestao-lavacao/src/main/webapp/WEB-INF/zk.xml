@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <!-- Tema do ZK -->
+    <library-property>
+        <name>org.zkoss.theme.preferred</name>
+        <value>iceblue</value>
+    </library-property>
+
+    <!-- Previne uso de Event Thread para melhor performance -->
+    <system-config>
+        <disable-event-thread>false</disable-event-thread>
+    </system-config>
+    
+    <!-- Posição do loading -->
+    <library-property>
+        <name>org.zkoss.zul.progressbox.position</name>
+        <value>center</value>
+    </library-property>
+    
+    <!-- Mostrar a versão do ZK no código-fonte -->
+    <library-property>
+        <name>org.zkoss.zk.ui.versionInfo.enabled</name>
+        <value>true</value>
+    </library-property>   
+    
+    <!-- Janela customizada de erro -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>    
+        <location>/zk_custom/errorPopup.zul</location>    
+    </error-page>
+    
+    <!-- Janela customizada de timeout -->
+    <session-config>
+        <device-type>ajax</device-type>    
+        <timeout-uri>/zk_custom/timeoutPopup.zul</timeout-uri>    
+    </session-config>
+    
+    <!-- Habilita sessão serializável -->
+    <system-config>
+        <ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+    </system-config>
+    
+    <!-- Importa componentes do ZK customizados -->
+    <language-config>
+        <addon-uri>/WEB-INF/lang-addon.xml</addon-uri>
+    </language-config>
+    
+        
+    <!-- Habilitar Websockets 
+    <listener>
+        <listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>
+    </listener>
+    -->    
+</zk>

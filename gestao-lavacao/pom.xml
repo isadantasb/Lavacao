@@ -7,7 +7,8 @@
     <organization>
         <name>Equipe 08 - CC - LCA - SISTEMA DE GESTÃO DE LAVAÇÃO</name>
     </organization>
-    
+
+    <groupId>br.uem.npd</groupId>
     <artifactId>mavenbootstrap</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
@@ -115,7 +116,7 @@
              Essas bibliotecas locais são da versão ZK 8.5, verifique compatibilidade com ZK 9 
              Essas bibliotecas são apenas para uso educacional, não possuem a correta licença de uso.
         -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.zkoss.zk</groupId>
             <artifactId>zkmax</artifactId>
             <version>8.5.0</version>
@@ -144,16 +145,16 @@
             <groupId>org.zkoss.zkforge</groupId>
             <artifactId>gmapsz</artifactId>
             <version>3.0.4</version>
-        </dependency> -->
-        
+        </dependency>
+
         <!-- ZHighCharts (biblioteca para gráficos) -->
-        <!-- <dependency>
+        <dependency>
             <groupId>br.uem.npd</groupId>
             <artifactId>zhighcharts</artifactId>
             <version>9.3.1</version>
             <scope>system</scope>
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/zhighcharts.jar</systemPath>
-        </dependency> -->
+        </dependency>
         
         <!-- Db2 Driver (biblioteca para conectar no banco de dados DB2) -->
         <dependency>
