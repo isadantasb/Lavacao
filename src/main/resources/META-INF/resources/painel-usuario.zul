@@ -1,0 +1,38 @@
+<?link rel="stylesheet" type="text/css" href="~./css/style.css"?>
+<zk>
+    <div sclass="dashboard-layout" apply="com.example.demo.PainelComposer">
+        <div sclass="sidebar">
+            <div sclass="sidebar-header"><image src="~./images/logo_lavacao.png" sclass="logo-img-small"/><vlayout spacing="0"><label value="HUM" sclass="logo-title"/><label value="Gestão de Lavações" sclass="logo-subtitle"/></vlayout></div>
+            <vlayout sclass="menu-items" spacing="5px">
+                <button label="Painel" image="~./images/painel-icon.png" sclass="menu-btn active" href="painel-usuario.zul"/>
+                <button label="Registrar Limpeza" image="~./images/registrarLimpeza-icon.png" sclass="menu-btn" onClick="self.getPage().getFellow(&quot;modalNovaLimpeza&quot;).setVisible(true)"/>
+                <button label="Histórico" image="~./images/historico-icon.png" sclass="menu-btn" href="historico-usuario.zul"/>
+                <button label="Configurações" image="~./images/config-icon.png" sclass="menu-btn" href="configuracoes-usuario.zul"/>
+            </vlayout>
+            <div sclass="user-profile"><div class="avatar">C</div><vlayout spacing="0"><label value="Carlos Lima" sclass="user-name"/><label value="Usuário" sclass="user-role"/></vlayout><button label="Sair" sclass="logout-btn" href="teste.zul"/></div>
+        </div>
+        <div sclass="main-content">
+            <vlayout spacing="5px" style="margin-bottom: 24px;"><label value="Painel de Limpezas" sclass="page-heading"/><label value="Visão geral dos ambientes e prazos" sclass="page-subheading"/></vlayout>
+            <hlayout spacing="20px" sclass="summary-cards-container">
+                <div sclass="summary-card card-black"><image src="~./images/skull.png" sclass="summary-icon"/><label id="expiradosCount" value="0" sclass="summary-number"/><label value="Expirados" sclass="summary-text"/></div>
+                <div sclass="summary-card card-red"><image src="~./images/urgente-icon.png" sclass="summary-icon"/><label id="urgenteCount" value="0" sclass="summary-number"/><label value="Urgente / atrasado" sclass="summary-text"/></div>
+                <div sclass="summary-card card-yellow"><image src="~./images/relogio.png" sclass="summary-icon"/><label id="atencaoCount" value="0" sclass="summary-number"/><label value="Atenção" sclass="summary-text"/></div>
+                <div sclass="summary-card card-green"><image src="~./images/check.png" sclass="summary-icon"/><label id="emDiaCount" value="0" sclass="summary-number"/><label value="Em dia" sclass="summary-text"/></div>
+            </hlayout>
+            <div sclass="filter-bar"><textbox placeholder="Pesquisar por sala" sclass="search-input"/><button label="+ Registrar Limpeza" sclass="btn-primary btn-add" onClick="self.getPage().getFellow(&quot;modalNovaLimpeza&quot;).setVisible(true)"/></div>
+            <div id="containerDeSalas" sclass="rooms-grid"/>
+        </div>
+    </div>
+    <window id="modalNovaLimpeza" title="Nova limpeza&#10;Registrar Limpeza" mode="modal" visible="false" closable="true" onClose="event.stopPropagation(); self.setVisible(false)" width="700px" sclass="custom-modal">
+        <vlayout sclass="modal-form" spacing="15px">
+            <hlayout sclass="modal-row" spacing="15px"><vlayout sclass="modal-field" spacing="5px" hflex="1"><label value="Data" sclass="input-label"/><datebox id="dataLimpeza" format="dd/MM/yyyy" sclass="custom-input" hflex="1"/></vlayout><vlayout sclass="modal-field" spacing="5px" hflex="1"><label value="Hora" sclass="input-label"/><timebox sclass="custom-input" hflex="1"/></vlayout></hlayout>
+            <vlayout sclass="modal-field" spacing="5px"><label value="Ambiente" sclass="input-label"/><combobox id="ambienteLimpeza" placeholder="Selecione um ambiente" sclass="custom-input" hflex="1"/></vlayout>
+            <vlayout sclass="modal-field" spacing="5px"><label value="Tipo de limpeza" sclass="input-label"/><hlayout sclass="modal-options" spacing="10px"><button label="Terminal Simples" sclass="btn-toggle"/><button label="Terminal Dupla" sclass="btn-toggle"/><button label="Embelezamento" sclass="btn-toggle"/></hlayout></vlayout>
+            <vlayout sclass="modal-field" spacing="5px"><label value="Encarregado" sclass="input-label"/><textbox placeholder="Ex.: Maria" sclass="custom-input"/></vlayout>
+            <vlayout sclass="modal-field" spacing="5px"><label value="Equipe" sclass="input-label"/><textbox placeholder="Ex.: José, Ana, Roberta" sclass="custom-input"/></vlayout>
+            <vlayout sclass="modal-field" spacing="5px"><label value="Observações" sclass="input-label"/><textbox placeholder="Ex.: Limpeza após alta do paciente" sclass="custom-input"/></vlayout>
+            <vlayout sclass="atp-section" spacing="15px"><checkbox label="Realizou teste ATP?" onCheck="self.getPage().getFellow(&quot;modalNovaLimpeza&quot;).getFellow(&quot;atpResults&quot;).setVisible(self.isChecked())"/><hlayout id="atpResults" sclass="atp-results" spacing="12px" visible="false"><vlayout spacing="5px" hflex="1"><label value="Resultado do Teste Atual" sclass="input-label"/><textbox placeholder="Ex.: 120 RLU" sclass="custom-input"/></vlayout><vlayout spacing="5px" hflex="1"><label value="Resultado do Teste Anterior" sclass="input-label"/><textbox placeholder="Ex.: 150 RLU" sclass="custom-input"/></vlayout></hlayout></vlayout>
+            <hlayout sclass="modal-actions" spacing="15px" width="100%"><button label="Cancelar" sclass="btn-cancel" onClick="self.getPage().getFellow(&quot;modalNovaLimpeza&quot;).setVisible(false)"/><button id="salvarLimpeza" label="Salvar registro" sclass="btn-primary modal-save"/></hlayout>
+        </vlayout>
+    </window>
+</zk>
