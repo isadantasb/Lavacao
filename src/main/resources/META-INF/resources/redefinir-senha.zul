@@ -1,0 +1,50 @@
+<?link rel="stylesheet" type="text/css" href="~./css/style.css"?>
+<zk>
+    <div sclass="login-page">
+        <div sclass="login-card">
+            <div sclass="login-left">
+                <div sclass="logo-container">
+                    <image src="~./images/logo_lavacao.png" sclass="logo-img"/>
+                    <vlayout spacing="0">
+                        <label value="HUM" sclass="logo-title"/>
+                        <label value="Gestão de Lavações" sclass="logo-subtitle"/>
+                    </vlayout>
+                </div>
+                <vlayout spacing="15px" sclass="welcome-text">
+                    <label value="Hospital Universitário Regional de Maringá" sclass="main-title"/>
+                    <label value="Sistema digital para registro e controle de limpezas em conformidade com a ANVISA." sclass="main-description"/>
+                </vlayout>
+                <label value="© 2026 HUM - DIN — UEM" sclass="footer-text"/>
+            </div>
+            <div sclass="login-right">
+                <vlayout spacing="2px" style="margin-bottom: 20px;">
+                    <label value="Recuperar senha" sclass="form-title"/>
+                </vlayout>
+                <vlayout spacing="15px" sclass="form-layout">
+                    <vlayout spacing="5px">
+                        <label value="Insira o código enviado por e-mail" sclass="input-label"/>
+                        <hlayout spacing="10px">
+                            <textbox maxlength="1" sclass="code-input"/>
+                            <textbox maxlength="1" sclass="code-input"/>
+                            <textbox maxlength="1" sclass="code-input"/>
+                            <textbox maxlength="1" sclass="code-input"/>
+                            <textbox maxlength="1" sclass="code-input"/>
+                        </hlayout>
+                    </vlayout>
+                    <vlayout spacing="5px">
+                        <label value="Insira nova senha" sclass="input-label"/>
+                        <textbox type="password" placeholder="••••••" sclass="custom-input"/>
+                    </vlayout>
+                    <vlayout spacing="5px">
+                        <label value="Confirme nova senha" sclass="input-label"/>
+                        <textbox type="password" placeholder="••••••" sclass="custom-input"/>
+                    </vlayout>
+                    <button label="Alterar senha" sclass="btn-primary" style="margin-top: 10px;"/>
+                    <div style="text-align: right; width: 100%;">
+                        <a label="Voltar à tela de login" sclass="forgot-password" href="teste.zul"/>
+                    </div>
+                </vlayout>
+            </div>
+        </div>
+    </div>
+</zk>

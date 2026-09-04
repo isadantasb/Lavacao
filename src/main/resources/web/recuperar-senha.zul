@@ -1,0 +1,31 @@
+<?link rel="stylesheet" type="text/css" href="~./css/style.css"?>
+<zk>
+    <div sclass="login-page">
+        <div sclass="login-card">
+            
+            <div sclass="login-left">
+            </div>
+            
+            <div sclass="login-right">
+                <vlayout spacing="2px" style="margin-bottom: 25px;">
+                    <label value="Recuperar senha" sclass="form-title"/>
+                    <label value="Para recuperar sua senha, insira o e-mail utilizado durante seu cadastro." sclass="form-subtitle" style="line-height: 1.4; display: block; margin-top: 5px;"/>
+                </vlayout>
+                
+                <vlayout spacing="15px" sclass="form-layout">
+                    <vlayout spacing="5px">
+                        <label value="E-mail" sclass="input-label"/>
+                        <textbox placeholder="ana@hum.br" sclass="custom-input"/>
+                    </vlayout>
+                    
+                    <button label="Enviar código de redefinição de senha por e-mail" sclass="btn-primary" style="margin-top: 5px;"/>
+                    
+                    <div style="text-align: right; width: 100%; margin-top: 5px;">
+                        <a label="Voltar a Tela de Login" sclass="forgot-password" href="teste.zul"/>
+                    </div>
+                </vlayout>
+            </div>
+            
+        </div>
+    </div>
+</zk>
